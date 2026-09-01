@@ -1,13 +1,10 @@
-# Canada Working Holiday Budget Calculator — V2
+# WH HQ V3
+Brand: WH HQ — Go prepared. Go independent.
 
-Upload these files together to the repository root:
+Upload all four core files to the repository root:
 - index.html
 - styles.css
 - data.js
 - script.js
 
-GitHub Pages:
-- Branch: main
-- Folder: /(root)
-
-Most planning assumptions are in `data.js`. They are estimates and should be reviewed and date-stamped as prices change.
+GitHub Pages should continue serving the site from the main branch root.
