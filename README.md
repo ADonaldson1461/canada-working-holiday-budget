@@ -1,4 +1,14 @@
-# WH HQ V5.1
-Multi-page MVP for WH HQ — Go prepared. Go independent.
+# WH HQ V6.1
 
-V5.1: refined logo sizing/centering and simplified destination-page navigation to Tools dropdown + Guides.
+Canada is now the first full destination command centre.
+
+## V6.1 additions
+- Decide / Prepare / Arrive journey structure
+- Destination matcher
+- Canada destination comparison page
+- Cost snapshot and budget CTA
+- First 48 hours / first week / first month arrival guidance
+- Expanded working holiday checklist
+- Destination and tool pathways
+
+Upload all files to the root of the GitHub Pages repository.
