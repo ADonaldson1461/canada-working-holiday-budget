@@ -1,0 +1,13 @@
+{
+  "version": "6.7",
+  "canonicalFile": "data.js",
+  "datasets": [
+    {
+      "id": "app-config",
+      "file": "data.js",
+      "criticality": "critical",
+      "sources": ["bank-canada-fx", "bc-wage", "ab-wage", "on-wage", "qc-wage", "ircc-iec", "cra-income-tax", "cra-payroll"]
+    }
+  ],
+  "note": "V6.7 validates the repository's current canonical browser dataset (data.js). A future data-normalisation release can split this into individual JSON datasets without changing the research engine contract."
+}

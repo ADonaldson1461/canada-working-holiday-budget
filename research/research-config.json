@@ -1,0 +1,14 @@
+{
+  "version":"6.7",
+  "userAgent":"WH-HQ-Research-Engine/6.7 (+https://github.com/ADonaldson1461/canada-working-holiday-budget)",
+  "requestTimeoutSeconds":20,
+  "maxBytes":3000000,
+  "maxWorkers":4,
+  "maxRedirects":5,
+  "failurePolicy":"fail-safe",
+  "publishPolicy":"human-approval-required",
+  "snapshotDirectory":"research/snapshots",
+  "reportDirectory":"research/reports",
+  "reviewQueue":"research/review-queue.json",
+  "baselineDirectory":"research/baselines"
+}

@@ -1,0 +1,42 @@
+name: WH HQ Research Engine
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 1 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validate data
+        run: python research/validate_data.py
+
+      - name: Check approved sources
+        run: python research/watch_sources.py
+
+      - name: Check canonical datasets
+        run: python research/check_changes.py
+
+      # Pull requests are validation-only: never write research evidence back to the branch.
+      - name: Commit research evidence
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name 'WH HQ Research Engine'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/snapshots research/reports research/review-queue.json research/baselines
+          git diff --cached --quiet || git commit -m 'Research Engine: update evidence and review queue'
+          git push
