@@ -1,0 +1,1 @@
+Review items are stored in research/review-queue.json. Critical and customer-facing changes require human approval before the canonical data files are edited.
