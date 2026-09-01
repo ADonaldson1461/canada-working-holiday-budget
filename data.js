@@ -1,4 +1,4 @@
-const APP_CONFIG={version:"6.2",updated:"September 2026",fxDate:"31 August 2026",fxSource:"Indicative planning rates based on recent public reference rates",
+const APP_CONFIG={version:"6.4",updated:"September 2026",fxDate:"31 August 2026",fxSource:"Indicative planning rates based on recent public reference rates",
 currencies:{
 CAD:{country:"Canada",name:"Canadian Dollar",symbol:"C$",locale:"en-CA",rate:1,decimals:0},
 AUD:{country:"Australia",name:"Australian Dollar",symbol:"A$",locale:"en-AU",rate:.9971,decimals:0},
@@ -45,4 +45,6 @@ banff:{name:"Banff",province:"Alberta",provinceCode:"AB",minimumWage:15,accommod
 calgary:{name:"Calgary",province:"Alberta",provinceCode:"AB",minimumWage:15,accommodation:{staff:600,shared:750,privateRoom:900,apartment:1513},monthly:{food:450,transport:126,phone:35,entertainment:250,misc:200},defaultWage:20},
 toronto:{name:"Toronto",province:"Ontario",provinceCode:"ON",minimumWage:17.60,minimumWageNext:17.95,minimumWageNextDate:"October 1, 2026",accommodation:{staff:700,shared:800,privateRoom:1100,apartment:2234},monthly:{food:500,transport:130,phone:35,entertainment:250,misc:200},defaultWage:20},
 montreal:{name:"Montreal",province:"Quebec",provinceCode:"QC",minimumWage:16.60,accommodation:{staff:600,shared:700,privateRoom:950,apartment:1769},monthly:{food:450,transport:100,phone:35,entertainment:250,misc:200},defaultWage:19}},
+jobTypes:{hospitality:{label:"Hospitality / server",wage:22,hours:32},ski:{label:"Ski resort",wage:21,hours:32},hotel:{label:"Hotel",wage:21,hours:32},retail:{label:"Retail",wage:20,hours:30},construction:{label:"Construction / trades",wage:28,hours:38},farm:{label:"Farm / seasonal",wage:20,hours:38},office:{label:"Office / professional",wage:28,hours:35},unknown:{label:"Not sure yet",wage:22,hours:32}},
+taxModel:{year:2026,federalBPA:16452,cea:1501,cpp:{rate:.0595,ympe:74600,exemption:3500,cpp2Rate:.04,yampe:85000},ei:{rate:.0163,maxInsurable:68900},provinces:{BC:{bpa:13216,rates:[[50363,.056],[100728,.077],[115648,.105],[140430,.1229],[190405,.147],[265545,.168],[Infinity,.205]]},AB:{bpa:22769,rates:[[61200,.08],[154259,.10],[185111,.12],[246813,.13],[370220,.14],[Infinity,.15]]},ON:{bpa:12989,rates:[[53891,.0505],[107785,.0915],[150000,.1116],[220000,.1216],[Infinity,.1316]]},QC:{bpa:18952,rates:[[54345,.14],[108680,.19],[132245,.24],[Infinity,.2575]]}}},
 lifestyle:{budget:{food:350,entertainment:100,misc:100},normal:{food:500,entertainment:250,misc:200},social:{food:650,entertainment:450,misc:300}}};
