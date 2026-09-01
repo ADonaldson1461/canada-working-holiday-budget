@@ -1,0 +1,42 @@
+{
+  "version": "7.0",
+  "name": "Australian traveller to Whistler — 12 month Quick Estimate",
+  "purpose": "Regression scenario for the existing calculator; not customer-facing functionality.",
+  "inputs": {
+    "homeCountry": "Australia",
+    "currency": "AUD",
+    "startingSavings": 20000,
+    "destination": "whistler",
+    "months": 12,
+    "accommodation": "staff",
+    "lifestyle": "normal",
+    "working": true,
+    "jobType": "hospitality",
+    "wageCad": 22,
+    "hoursPerWeek": 32,
+    "firstPayWeeks": 4,
+    "flightCad": 1200,
+    "temporaryWeeks": 2,
+    "temporaryRateCad": 400,
+    "depositCad": 500,
+    "insuranceCad": 1000,
+    "gearCad": 750,
+    "otherSetupCad": 300
+  },
+  "expectedApproxCad": {
+    "grossAnnualIncome": 36608,
+    "netMonthlyIncome": 2510,
+    "monthlyLivingCost": 1790,
+    "monthlySurplus": 720,
+    "startingSavingsCad": 19868,
+    "setupCosts": 4920,
+    "cashAfterSetup": 14948
+  },
+  "tolerance": {
+    "currency": 5,
+    "income": 5,
+    "monthlyCosts": 5,
+    "setupCosts": 10
+  },
+  "status": "baseline"
+}
