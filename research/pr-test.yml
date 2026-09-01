@@ -1,0 +1,29 @@
+name: WH HQ Research Engine — PR Test
+
+on:
+  pull_request:
+    paths:
+      - 'research/**'
+      - 'data/**'
+      - '.github/workflows/research.yml'
+      - '.github/workflows/pr-test.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Validate data
+        run: python research/validate_data.py
+      - name: Run source checks
+        run: python research/watch_sources.py
+      - name: Check canonical datasets
+        run: python research/check_changes.py
