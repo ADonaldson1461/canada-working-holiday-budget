@@ -1,12 +1,18 @@
 name: WH HQ Research Engine
 
 on:
+  pull_request:
+    paths:
+      - 'research/**'
+      - 'data/**'
+      - '.github/workflows/research.yml'
   workflow_dispatch:
   schedule:
     - cron: '17 1 * * 1'
 
+# PR runs are intentionally read-only. Scheduled/manual runs may save evidence.
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   research:
@@ -24,10 +30,3 @@ jobs:
         run: python research/watch_sources.py
       - name: Check canonical datasets
         run: python research/check_changes.py
-      - name: Commit research evidence
-        run: |
-          git config user.name 'WH HQ Research Engine'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add research/snapshots research/reports research/review-queue.json research/baselines
-          git diff --cached --quiet || git commit -m 'Research Engine: update evidence and review queue'
-          git push
