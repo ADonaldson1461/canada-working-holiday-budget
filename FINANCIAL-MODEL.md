@@ -1,26 +1,22 @@
-# WH HQ V6.4 financial model
+# WH HQ V6.5 Financial Model
 
-V6.4 separates the experience into a calm Quick Estimate and a detailed Full Planner.
+## Purpose
+The calculator is a planning tool for working holidaymakers. It estimates cash flow and affordability; it is not tax, immigration or financial advice.
 
-## Quick Estimate
-Uses destination defaults for accommodation/living costs and a simplified income estimate. It is designed to answer: “Am I roughly in the right financial position?” It should not be presented as a tax calculation.
+## Currency
+All calculations are performed internally in CAD. Inputs and outputs can be displayed in the user's home currency using the Bank of Canada daily-average FX snapshot dated 31 August 2026.
 
-## Full Planner
-Uses a 2026 planning model for Canadian employment income:
-- federal progressive income tax brackets
-- destination province progressive tax brackets
-- federal basic personal amount and Canada Employment Amount
-- CPP and EI payroll contributions
-- Quebec uses QPP/EI/QPIP planning assumptions
-- destination/job-type wage and hours assumptions
-- employment delay scenarios
-- one-off setup costs, monthly living costs, buffer and savings goal
+## Income
+Full Planner estimates annual gross employment income from hourly wage × hours/week × 52. It applies 2026 federal/provincial income-tax brackets plus CPP/EI, with Quebec using QPP/EI/QPIP parameters. The result is labelled estimated take-home because actual payroll withholding and annual tax outcomes vary.
 
-The tax model is an estimate for planning. Actual payroll withholding and tax refunds can differ, especially for working-holidaymakers because residency, TD1 claims, partial-year income and other circumstances can affect the result.
+## Costs
+Destination data stores a planning value plus observed ranges where available. Accommodation, food, transport, phone and lifestyle costs are planning assumptions rather than guarantees.
 
-Official references used for the 2026 model:
-- CRA 2026 federal/provincial tax rates and brackets
-- CRA 2026 payroll deduction formulas, CPP and EI
-- Revenu Québec 2026 tax rates and personal credit amounts
+## Immigration setup
+The 2026 IEC planning data includes C$2,500 proof of funds, C$184.75 IEC fee, C$100 Working Holiday open work permit holder fee and C$85 biometrics fee where applicable. Users are directed to verify current IRCC requirements before applying or travelling.
 
-Rates and assumptions should be reviewed whenever the site is updated for a new tax year.
+## Scenarios
+Full Planner stress-tests job-search delays and projects cash balances over 6–12 months.
+
+## Data governance
+Canonical data lives under `/data`. Each important dataset has source IDs and verification dates in `source-registry.json`.
