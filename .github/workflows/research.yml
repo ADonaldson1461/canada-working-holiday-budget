@@ -31,7 +31,10 @@ jobs:
       - name: Check canonical datasets
         run: python research/check_changes.py
 
-      # Pull requests are validation-only: never write research evidence back to the branch.
+      - name: Generate research intelligence
+        run: python research/intelligence.py
+
+      # Pull requests are validation-only: never write evidence or reports back to the branch.
       - name: Commit research evidence
         if: github.event_name != 'pull_request'
         run: |
