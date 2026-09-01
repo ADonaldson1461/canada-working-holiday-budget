@@ -1,0 +1,16 @@
+{
+  "version": "6.7",
+  "sources": [
+    {"id":"ircc-iec","name":"IRCC — International Experience Canada","url":"https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html","tier":1,"criticality":"critical","watch":true,"cadence":"weekly","use":"IEC eligibility, fees and participation rules"},
+    {"id":"cra-income-tax","name":"Canada Revenue Agency — Income Tax","url":"https://www.canada.ca/en/revenue-agency/services/tax/individuals/frequently-asked-questions-individuals/canadian-income-tax-rates-individuals-current-previous-years.html","tier":1,"criticality":"critical","watch":true,"cadence":"monthly","use":"Federal income-tax planning parameters"},
+    {"id":"cra-payroll","name":"Canada Revenue Agency — Payroll deductions","url":"https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll.html","tier":1,"criticality":"critical","watch":true,"cadence":"monthly","use":"CPP and EI payroll planning parameters"},
+    {"id":"bc-wage","name":"Government of British Columbia — Minimum wage","url":"https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/wages","tier":1,"criticality":"critical","watch":true,"cadence":"monthly","use":"BC minimum wage and effective dates"},
+    {"id":"ab-wage","name":"Government of Alberta — Minimum wage","url":"https://www.alberta.ca/minimum-wage.aspx","tier":1,"criticality":"critical","watch":true,"cadence":"monthly","use":"Alberta minimum wage and effective dates"},
+    {"id":"on-wage","name":"Government of Ontario — Minimum wage","url":"https://www.ontario.ca/page/minimum-wage-ontario","tier":1,"criticality":"critical","watch":true,"cadence":"monthly","use":"Ontario minimum wage and effective dates"},
+    {"id":"qc-wage","name":"Government of Quebec — Minimum wage","url":"https://www.cnesst.gouv.qc.ca/en/working-conditions/wage-and-pay/wage","tier":1,"criticality":"critical","watch":true,"cadence":"monthly","use":"Quebec minimum wage"},
+    {"id":"bank-canada-fx","name":"Bank of Canada — Exchange rates","url":"https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/","tier":1,"criticality":"high","watch":true,"cadence":"daily","use":"CAD reference FX data"},
+    {"id":"translink","name":"TransLink — Fares","url":"https://www.translink.ca/transit-fares/pricing-and-fare-zones","tier":2,"criticality":"medium","watch":true,"cadence":"monthly","use":"Vancouver transit planning"},
+    {"id":"calgary-transit","name":"Calgary Transit — Fares","url":"https://www.calgarytransit.com/content/transit/en/home/fares---passes.html","tier":2,"criticality":"medium","watch":true,"cadence":"monthly","use":"Calgary transit planning"},
+    {"id":"ttc","name":"TTC — Fares","url":"https://www.ttc.ca/Fares-and-passes","tier":2,"criticality":"medium","watch":true,"cadence":"monthly","use":"Toronto transit planning"}
+  ]
+}
