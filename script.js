@@ -37,6 +37,17 @@ function bindEvents(){$("originCountry").addEventListener("change",e=>{if(e.targ
 populateCountries();bindEvents();const saved=localStorage.getItem("whhqHomeCurrency");if(saved&&APP_CONFIG.currencies[saved]){$("originCountry").value=saved;homeCurrency=saved;homeCountry=$("originCountry").options[$("originCountry").selectedIndex]?.dataset.country||currency().country;updateOriginPreview();}else updateOriginPreview();
 
 function switchDisplayCurrency(next){if(next===displayCurrency)return;const cadValues={};currencyInputs.forEach(id=>{if($(id))cadValues[id]=cadInput(id);});displayCurrency=next;currencyInputs.forEach(id=>{if($(id)&&cadValues[id]!=null)$(id).value=displayCurrency==="cad"?Math.round(cadValues[id]):roundInput(fromCad(cadValues[id]),id);});document.querySelectorAll(".currency-symbol").forEach(el=>el.textContent=displayCurrency==="cad"?APP_CONFIG.currencies.CAD.symbol:currency().symbol);updateInputRanges();accommodationOptions();recalc();}
-function bindV63(){document.querySelectorAll("#modeSwitch button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("#modeSwitch button").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.body.classList.toggle("quick",b.dataset.mode==="quick");}));$("homeCurrencyBtn")?.addEventListener("click",()=>{switchDisplayCurrency("home")});$("cadCurrencyBtn")?.addEventListener("click",()=>{switchDisplayCurrency("cad")});["bufferPct","savingsGoal","jobType","firstPayWeeks"].forEach(id=>$(id)?.addEventListener("input",recalc));currencyInputs.forEach(id=>$(id)?.addEventListener("input",()=>{const el=$(id);if(el){el.value=String(Math.round(Number(el.value)||0));recalc();}}));}
+function renumberSteps(){
+ const steps=[...document.querySelectorAll(".form-panel > .step")];
+ let n=2;
+ steps.forEach(step=>{
+  const hidden=step.classList.contains("extended-only") && document.body.classList.contains("mode-quick");
+  if(hidden)return;
+  const badge=step.querySelector(".step-head > span");
+  if(badge)badge.textContent=String(n).padStart(2,"0");
+  n++;
+ });
+}
+function bindV63(){document.querySelectorAll("#modeSwitch button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("#modeSwitch button").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.body.classList.toggle("mode-quick",b.dataset.mode==="quick");document.body.classList.toggle("mode-full",b.dataset.mode==="full");renumberSteps();}));$("homeCurrencyBtn")?.addEventListener("click",()=>{switchDisplayCurrency("home")});$("cadCurrencyBtn")?.addEventListener("click",()=>{switchDisplayCurrency("cad")});["bufferPct","savingsGoal","jobType","firstPayWeeks"].forEach(id=>$(id)?.addEventListener("input",recalc));currencyInputs.forEach(id=>$(id)?.addEventListener("input",()=>{const el=$(id);if(el){el.value=String(Math.round(Number(el.value)||0));recalc();}}));}
 bindV63();
-document.body.classList.add("quick");
+document.body.classList.add("mode-quick");document.body.classList.remove("mode-full");renumberSteps();
