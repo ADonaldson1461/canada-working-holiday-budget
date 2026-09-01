@@ -1,217 +1,29 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Canada Working Holiday Budget Calculator</title>
-  <meta name="description" content="Plan your Canadian Working Holiday budget. Estimate startup costs, monthly living expenses, income, savings runway and how long your money can last.">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="wrap nav">
-    <a class="brand" href="#">🇨🇦 WH Budget</a>
-    <a class="nav-link" href="#calculator">Calculator</a>
-  </div>
-</header>
-
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Canada Working Holiday Budget Calculator | WH Budget</title>
+<meta name="description" content="Estimate how much money you need for a Canadian Working Holiday. Compare cities, accommodation, income, expenses and savings runway.">
+<link rel="stylesheet" href="styles.css"></head><body>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="#">🇨🇦 WH Budget</a><nav><a href="#calculator">Calculator</a><a href="#compare">Compare cities</a><a href="#why">How it works</a></nav></div></header>
 <main>
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">CANADA WORKING HOLIDAY</span>
-        <h1>Know how much money you actually need.</h1>
-        <p class="hero-copy">Build a realistic first-month and ongoing budget for your Canadian Working Holiday — including accommodation, food, insurance, transport, entertainment, income and savings runway.</p>
-        <a class="button primary" href="#calculator">Build my budget ↓</a>
-      </div>
-      <div class="hero-card">
-        <div class="mini-label">Official IEC minimum proof of funds</div>
-        <div class="big-number">CAD $2,500</div>
-        <p>Canada requires participants to show at least CAD $2,500 in funds, plus money for a return ticket. That's a minimum — not necessarily a comfortable working-holiday budget.</p>
-        <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/prepare-arrival.html" target="_blank" rel="noopener">Check official IEC requirements →</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="calculator" class="section">
-    <div class="wrap">
-      <div class="section-heading">
-        <span class="eyebrow">STEP 1</span>
-        <h2>Tell us about your trip</h2>
-      </div>
-
-      <div class="calculator-grid">
-        <div class="panel inputs">
-          <h3>Your starting position</h3>
-          <div class="field-grid">
-            <label>Starting savings (CAD)
-              <input id="savings" type="number" min="0" step="100" value="20000">
-            </label>
-            <label>Flight to Canada (CAD)
-              <input id="flight" type="number" min="0" step="50" value="1200">
-            </label>
-          </div>
-
-          <div class="field-grid">
-            <label>City / destination
-              <select id="city">
-                <option value="vancouver">Vancouver</option>
-                <option value="whistler">Whistler</option>
-                <option value="banff">Banff</option>
-                <option value="calgary">Calgary</option>
-                <option value="toronto">Toronto</option>
-                <option value="montreal">Montreal</option>
-                <option value="custom">Custom</option>
-              </select>
-            </label>
-            <label>Trip length (months)
-              <input id="months" type="number" min="1" max="36" step="1" value="12">
-            </label>
-          </div>
-
-          <h3>One-off / setup costs</h3>
-          <div class="field-grid three">
-            <label>Visa / admin (CAD)
-              <input id="visa" type="number" min="0" step="25" value="185">
-            </label>
-            <label>Insurance (CAD)
-              <input id="insurance" type="number" min="0" step="50" value="1000">
-            </label>
-            <label>Initial accommodation (CAD)
-              <input id="initialAccommodation" type="number" min="0" step="50" value="900">
-            </label>
-          </div>
-          <div class="field-grid three">
-            <label>Gear / clothing (CAD)
-              <input id="gear" type="number" min="0" step="50" value="800">
-            </label>
-            <label>Transport setup (CAD)
-              <input id="transportSetup" type="number" min="0" step="25" value="250">
-            </label>
-            <label>Other setup costs (CAD)
-              <input id="otherSetup" type="number" min="0" step="25" value="300">
-            </label>
-          </div>
-
-          <h3>Monthly living costs</h3>
-          <p class="muted">We pre-fill rough planning assumptions. Change every number to match your situation.</p>
-          <div class="field-grid three">
-            <label>Accommodation / rent
-              <input id="rent" type="number" min="0" step="25" value="1200">
-            </label>
-            <label>Food / groceries
-              <input id="food" type="number" min="0" step="25" value="450">
-            </label>
-            <label>Transport
-              <input id="transport" type="number" min="0" step="25" value="150">
-            </label>
-          </div>
-          <div class="field-grid three">
-            <label>Phone
-              <input id="phone" type="number" min="0" step="5" value="60">
-            </label>
-            <label>Entertainment
-              <input id="entertainment" type="number" min="0" step="25" value="250">
-            </label>
-            <label>Miscellaneous
-              <input id="misc" type="number" min="0" step="25" value="200">
-            </label>
-          </div>
-
-          <h3>Work & income</h3>
-          <div class="field-grid three">
-            <label>Hourly wage (CAD)
-              <input id="wage" type="number" min="0" step="0.50" value="22">
-            </label>
-            <label>Hours / week
-              <input id="hours" type="number" min="0" max="80" step="1" value="35">
-            </label>
-            <label>Estimated tax rate
-              <input id="tax" type="number" min="0" max="60" step="1" value="20">
-            </label>
-          </div>
-          <label class="check"><input id="includeIncome" type="checkbox" checked> Include employment income in runway calculation</label>
-        </div>
-
-        <aside class="results panel">
-          <div class="result-top">
-            <span class="eyebrow">YOUR ESTIMATE</span>
-            <div id="status" class="status good">Comfortable</div>
-          </div>
-          <div class="hero-result">
-            <span>Estimated monthly burn</span>
-            <strong id="monthlyBurn">$2,310</strong>
-          </div>
-          <div class="stat-list">
-            <div><span>Monthly after-tax income</span><strong id="monthlyIncome">$2,669</strong></div>
-            <div><span>Monthly surplus / deficit</span><strong id="monthlySurplus">+$359</strong></div>
-            <div><span>Initial setup costs</span><strong id="setupCosts">$4,635</strong></div>
-            <div><span>Cash after setup</span><strong id="cashAfterSetup">$15,365</strong></div>
-            <div><span>Runway without work</span><strong id="runwayNoWork">6.7 months</strong></div>
-            <div><span>Runway with work</span><strong id="runwayWithWork">Self-sustaining</strong></div>
-          </div>
-          <div class="score-box">
-            <span>Recommended starting cash</span>
-            <strong id="recommended">$12,000–$18,000</strong>
-            <small id="recommendationNote">Based on your estimated setup costs and 3 months of living expenses.</small>
-          </div>
-          <button class="button primary full" onclick="window.print()">Save / print my budget</button>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="wrap two-col">
-      <div>
-        <span class="eyebrow">STEP 2</span>
-        <h2>Understand the number</h2>
-        <p>The calculator separates <strong>startup costs</strong> from your <strong>monthly burn</strong>. That's important: a $20,000 bank balance can look huge until flights, insurance, deposits, gear and your first few weeks without income start eating into it.</p>
-        <p>Your biggest lever is usually accommodation. If you can secure staff housing, a room share or employer-provided accommodation, your runway can change dramatically.</p>
-      </div>
-      <div class="tip-card">
-        <h3>Planning rule</h3>
-        <p>Don't treat Canada's official CAD $2,500 proof-of-funds requirement as your target. It is a government minimum for arrival, not a recommendation for a comfortable move.</p>
-        <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/apply-work-permit.html" target="_blank" rel="noopener">Verify the current IEC rules →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <div class="section-heading">
-        <span class="eyebrow">NEXT VERSION</span>
-        <h2>What we can add to make this a real business</h2>
-        <p class="muted">The calculator is the hook. The real asset is the audience and the tools around it.</p>
-      </div>
-      <div class="feature-grid">
-        <article><span>01</span><h3>City comparisons</h3><p>Compare Vancouver, Whistler, Banff, Calgary, Toronto and Montreal using editable cost assumptions.</p></article>
-        <article><span>02</span><h3>Job income calculator</h3><p>Estimate after-tax income from hospitality, ski resort, retail and professional jobs.</p></article>
-        <article><span>03</span><h3>Arrival checklist</h3><p>Turn the site into a step-by-step guide covering SIN, banking, phone, accommodation and work.</p></article>
-        <article><span>04</span><h3>Affiliate revenue</h3><p>Later, add relevant affiliate offers for insurance, accommodation, flights, SIMs, banking and gear.</p></article>
-        <article><span>05</span><h3>Email planner</h3><p>Let users save their result and receive a personalised Canada budget checklist.</p></article>
-        <article><span>06</span><h3>Premium planner</h3><p>Eventually sell a CAD/AUD budget workbook, job tracker and first-30-days planner as a bundle.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section sources">
-    <div class="wrap">
-      <h2>Sources & disclaimer</h2>
-      <p>This tool is a planning calculator, not immigration, tax, legal or financial advice. Cost assumptions are illustrative and should be replaced with current local prices. Always verify immigration requirements with the Government of Canada before travelling.</p>
-      <ul>
-        <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html" target="_blank" rel="noopener">Government of Canada — International Experience Canada</a></li>
-        <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/prepare-arrival.html" target="_blank" rel="noopener">Government of Canada — Prepare for arrival</a></li>
-        <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/apply-work-permit.html" target="_blank" rel="noopener">Government of Canada — Apply for an IEC work permit</a></li>
-      </ul>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">© 2026 WH Budget — Built for Australian working holidaymakers.</div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+<section class="hero"><div class="wrap hero-grid"><div><span class="eyebrow">CANADA WORKING HOLIDAY · 2026</span><h1>How much money do you <em>really</em> need?</h1><p>Build a personalised Canada Working Holiday budget in minutes. Convert your Australian savings, estimate living costs and see how long your money could last.</p><a class="button primary" href="#calculator">Calculate my budget ↓</a><p class="hero-note">Planning tool only. Costs vary by city, accommodation and lifestyle.</p></div>
+<div class="hero-stat"><span>Official IEC proof-of-funds minimum</span><strong>C$2,500</strong><p>Plus enough money for a return ticket. This is an immigration requirement — not a recommended working-holiday budget.</p><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/prepare-arrival.html" target="_blank">Verify official IEC requirements →</a></div></div></section>
+<section id="calculator" class="section"><div class="wrap"><div class="section-title"><span class="eyebrow">YOUR PLAN</span><h2>Build your Canada budget</h2><p>Start with your real numbers. The calculator fills sensible defaults where you don't know something yet.</p></div>
+<div class="calculator-layout"><div class="form-panel">
+<div class="step"><div class="step-head"><span>01</span><div><h3>Where are you going?</h3><p>We'll use city-specific cost assumptions.</p></div></div><div class="city-grid">
+<button class="city-card" data-city="whistler"><span>🏔️</span><b>Whistler</b><small>BC · Ski resort</small></button><button class="city-card" data-city="banff"><span>🏔️</span><b>Banff</b><small>AB · Ski resort</small></button><button class="city-card" data-city="vancouver"><span>🌊</span><b>Vancouver</b><small>BC · Major city</small></button><button class="city-card" data-city="calgary"><span>🏙️</span><b>Calgary</b><small>AB · Major city</small></button><button class="city-card" data-city="toronto"><span>🏙️</span><b>Toronto</b><small>ON · Major city</small></button><button class="city-card" data-city="montreal"><span>🍁</span><b>Montreal</b><small>QC · Major city</small></button></div></div>
+<div class="step"><div class="step-head"><span>02</span><div><h3>Your starting money</h3><p>Enter the amount you expect to have available for Canada.</p></div></div><div class="field-grid two"><label>Australian savings<div class="input-prefix"><span>A$</span><input id="savingsAud" type="number" min="0" step="100" value="20000"></div></label><label>Flight to Canada<div class="input-prefix"><span>C$</span><input id="flight" type="number" min="0" step="50" value="1200"></div></label></div><div class="conversion"><span>Estimated CAD equivalent</span><strong id="savingsCad">C$19,132</strong><small>Using an indicative rate of 1 AUD = 0.9566 CAD.</small></div></div>
+<div class="step"><div class="step-head"><span>03</span><div><h3>Accommodation</h3><p>This is usually the biggest variable in your budget.</p></div></div><div id="accommodationOptions" class="option-list"></div></div>
+<div class="step"><div class="step-head"><span>04</span><div><h3>How long are you staying?</h3><p>We'll separate one-off arrival costs from ongoing monthly costs.</p></div></div><div class="field-grid two"><label>Trip length<select id="months"><option value="3">3 months</option><option value="6">6 months</option><option value="9">9 months</option><option value="12" selected>12 months</option><option value="18">18 months</option><option value="24">24 months</option></select></label><label>Temporary accommodation<select id="temporaryWeeks"><option value="0">None</option><option value="1">1 week</option><option value="2" selected>2 weeks</option><option value="3">3 weeks</option><option value="4">4 weeks</option></select></label></div><div class="field-grid two"><label>Temporary accommodation / week<div class="input-prefix"><span>C$</span><input id="temporaryRate" type="number" min="0" step="25" value="400"></div></label><label>Rental deposit / bond<div class="input-prefix"><span>C$</span><input id="deposit" type="number" min="0" step="50" value="500"></div></label></div></div>
+<div class="step"><div class="step-head"><span>05</span><div><h3>Work & income</h3><p>See what employment could do to your monthly cash flow.</p></div></div><label class="toggle"><input id="working" type="checkbox" checked><span class="switch"></span><b>I expect to work in Canada</b></label><div id="workFields"><div class="field-grid three"><label>Hourly wage<div class="input-prefix"><span>C$</span><input id="wage" type="number" min="0" step=".25" value="22"></div></label><label>Hours / week<input id="hours" type="number" min="0" max="80" value="35"></label><label>Estimated deductions<div class="input-suffix"><input id="tax" type="number" min="0" max="60" value="20"><span>%</span></div></label></div><div class="hint" id="wageHint"></div></div></div>
+<div class="step"><div class="step-head"><span>06</span><div><h3>Lifestyle</h3><p>Choose a starting point, then edit individual costs if you know them.</p></div></div><div class="lifestyle-grid"><button class="lifestyle selected" data-life="budget"><b>Budget</b><span>Cook often, low-cost social life</span></button><button class="lifestyle" data-life="normal"><b>Normal</b><span>Balanced working-holiday lifestyle</span></button><button class="lifestyle" data-life="social"><b>Social</b><span>Eating out, drinks & activities</span></button></div><div class="field-grid three"><label>Food / groceries<div class="input-prefix"><span>C$</span><input id="food" type="number" min="0" step="25" value="400"></div></label><label>Transport<div class="input-prefix"><span>C$</span><input id="transport" type="number" min="0" step="5" value="55"></div></label><label>Phone<div class="input-prefix"><span>C$</span><input id="phone" type="number" min="0" step="5" value="35"></div></label><label>Entertainment<div class="input-prefix"><span>C$</span><input id="entertainment" type="number" min="0" step="25" value="100"></div></label><label>Miscellaneous<div class="input-prefix"><span>C$</span><input id="misc" type="number" min="0" step="25" value="100"></div></label></div></div>
+<div class="step"><div class="step-head"><span>07</span><div><h3>Other setup costs</h3><p>These happen before your normal monthly budget kicks in.</p></div></div><div class="field-grid three"><label>IEC fee<div class="input-prefix"><span>C$</span><input id="visa" type="number" value="184.75"></div></label><label>Work permit fee<div class="input-prefix"><span>C$</span><input id="workPermit" type="number" value="100"></div></label><label>Biometrics<div class="input-prefix"><span>C$</span><input id="biometrics" type="number" value="85"></div></label><label>Insurance — annual<div class="input-prefix"><span>C$</span><input id="insurance" type="number" value="1000"></div></label><label>Winter / travel gear<div class="input-prefix"><span>C$</span><input id="gear" type="number" value="750"></div></label><label>Other<div class="input-prefix"><span>C$</span><input id="otherSetup" type="number" value="300"></div></label></div></div>
+</div>
+<aside class="results-panel"><div class="results-inner"><div class="result-heading"><div><span class="eyebrow">YOUR ESTIMATE</span><h3 id="resultCity">Whistler</h3></div><div id="status" class="status">Calculating</div></div>
+<div class="big-result"><span>Recommended starting cash</span><strong id="recommended">—</strong><small>Setup costs + 3–6 months of estimated living expenses.</small></div>
+<div class="results-section"><h4>Starting position</h4><div class="result-row"><span>Starting savings</span><b id="rSavings">—</b></div><div class="result-row"><span>One-off setup costs</span><b id="rSetup">—</b></div><div class="result-row"><span>Cash after setup</span><b id="rCash">—</b></div></div>
+<div class="results-section"><h4>Monthly cash flow</h4><div class="result-row"><span>Accommodation</span><b id="rRent">—</b></div><div class="result-row"><span>Other living costs</span><b id="rOther">—</b></div><div class="result-row"><span>Total monthly burn</span><b id="rBurn">—</b></div><div class="result-row"><span>Estimated take-home income</span><b id="rIncome">—</b></div><div class="result-row highlight"><span>Monthly surplus</span><b id="rSurplus">—</b></div></div>
+<div class="runway"><div><span>Without working</span><strong id="rNoWork">—</strong></div><div><span>With your planned job</span><strong id="rWithWork">—</strong></div></div><div class="callout" id="callout">—</div><button class="button secondary full" onclick="window.print()">Print / save my budget</button></div></aside></div></div></section>
+<section id="compare" class="section alt"><div class="wrap"><div class="section-title"><span class="eyebrow">CITY COMPARISON</span><h2>Where does your money go furthest?</h2><p>These use staff-housing planning assumptions. Accommodation availability varies.</p></div><div class="comparison" id="comparison"></div></div></section>
+<section id="why" class="section"><div class="wrap two-col"><div><span class="eyebrow">WHY THIS MATTERS</span><h2>The official minimum isn't the same as a comfortable budget.</h2><p>Canada's IEC program requires eligible participants to demonstrate at least C$2,500 in funds, plus enough money for a return ticket. Your real budget depends on rent, work, food, transport and how quickly you find a job.</p><p>This calculator separates one-off arrival costs from normal monthly spending so you can see the difference between <strong>surviving</strong> and having enough breathing room to enjoy your trip.</p></div><div class="info-card"><h3>Data notes</h3><ul><li>Rent figures are planning estimates anchored to current 2026 asking-rent data and working-holiday accommodation evidence.</li><li>Staff accommodation varies substantially by employer and availability.</li><li>Wage estimates are illustrative; actual take-home pay depends on province, tax credits and circumstances.</li><li>Update assumptions before making major financial or travel decisions.</li></ul><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html" target="_blank">Official Government of Canada IEC information →</a></div></div></section>
+<section class="sources"><div class="wrap"><h2>Sources & disclaimer</h2><p>Planning estimates last reviewed September 2026. This website is not affiliated with the Government of Canada and does not provide immigration, tax, legal or financial advice. Always verify current requirements, prices and wages before relying on an estimate.</p><div class="source-links"><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html" target="_blank">Government of Canada — IEC</a><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/prepare-arrival.html" target="_blank">IEC — Prepare for arrival</a><a href="https://www.jobbank.gc.ca/trend-analysis" target="_blank">Government of Canada — Job Bank</a></div></div></section></main><footer><div class="wrap">© 2026 WH Budget · Built for Australian working holidaymakers.</div></footer>
+<script src="data.js"></script><script src="script.js"></script></body></html>
