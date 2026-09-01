@@ -1,0 +1,16 @@
+{
+  "version": "6.8",
+  "maxDiffLines": 80,
+  "keywords": {
+    "immigration": ["international experience canada", "iec", "work permit", "eligibility", "proof of funds", "fee", "invitation", "quota", "insurance"],
+    "tax": ["tax bracket", "basic personal amount", "cpp", "ei", "payroll", "contribution", "deduction"],
+    "wage": ["minimum wage", "wage", "hourly", "effective", "employment standards"],
+    "fx": ["exchange rate", "daily exchange rate", "cad", "australian dollar", "euro", "pound", "yen"],
+    "transport": ["fare", "monthly pass", "transit", "adult fare"]
+  },
+  "impactMap": {
+    "ircc-iec": ["app-config"], "cra-income-tax": ["app-config"], "cra-payroll": ["app-config"],
+    "bc-wage": ["app-config"], "ab-wage": ["app-config"], "on-wage": ["app-config"], "qc-wage": ["app-config"],
+    "bank-canada-fx": ["app-config"], "translink": ["app-config"], "calgary-transit": ["app-config"], "ttc": ["app-config"]
+  }
+}
