@@ -1,0 +1,13 @@
+{
+  "version":"6.7",
+  "datasets":[
+    {"id":"currencies","file":"data/currencies.json","criticality":"high","sources":["bank-canada-fx"]},
+    {"id":"countries","file":"data/countries.json","criticality":"medium","sources":[]},
+    {"id":"destinations","file":"data/destinations.json","criticality":"high","sources":["bc-wage","ab-wage","on-wage","qc-wage","translink","calgary-transit","ttc"]},
+    {"id":"job-types","file":"data/job-types.json","criticality":"high","sources":["ircc-iec"]},
+    {"id":"taxes-2026","file":"data/taxes-2026.json","criticality":"critical","sources":["cra-income-tax","cra-payroll"]},
+    {"id":"immigration-2026","file":"data/immigration-2026.json","criticality":"critical","sources":["ircc-iec"]},
+    {"id":"lifestyle","file":"data/lifestyle.json","criticality":"medium","sources":[]},
+    {"id":"fx-2026-08-31","file":"data/fx-2026-08-31.json","criticality":"high","sources":["bank-canada-fx"]}
+  ]
+}
