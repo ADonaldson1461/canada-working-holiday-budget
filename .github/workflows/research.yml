@@ -2,6 +2,7 @@ name: WH HQ Research Engine
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
   schedule:
     - cron: '17 1 * * 1'
