@@ -20,7 +20,7 @@ sources = load("source-registry.json")
 fx = load("fx-2026-08-31.json")
 
 config = {
-    "version": "6.5",
+    "version": "6.7",
     "updated": "September 2026",
     "dataLastVerified": "1 September 2026",
     "fxDate": "31 August 2026",
