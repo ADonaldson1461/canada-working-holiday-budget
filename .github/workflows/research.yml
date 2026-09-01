@@ -1,11 +1,11 @@
 name: WH HQ Research Engine
 
 on:
+  pull_request:
   workflow_dispatch:
   schedule:
     - cron: '17 1 * * 1'
 
-# Scheduled/manual runs are allowed to save evidence and review records.
 permissions:
   contents: write
 
@@ -15,17 +15,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+
       - name: Validate data
         run: python research/validate_data.py
+
       - name: Check approved sources
         run: python research/watch_sources.py
+
       - name: Check canonical datasets
         run: python research/check_changes.py
+
+      # Pull requests are validation-only: never write research evidence back to the branch.
       - name: Commit research evidence
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name 'WH HQ Research Engine'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
