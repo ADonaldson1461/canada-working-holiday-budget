@@ -1,0 +1,15 @@
+{
+  "version": "7.1",
+  "principle": "Help working holidaymakers understand the job market and find their own work.",
+  "filters": ["destination", "jobType", "experience"],
+  "jobTypes": ["hospitality", "ski", "hotel", "retail", "construction", "farm", "office"],
+  "experience": {
+    "any": "Any experience",
+    "entry": "No / little experience",
+    "experienced": "Experienced"
+  },
+  "sources": [
+    {"name":"Government of Canada Job Bank","url":"https://www.jobbank.gc.ca/","purpose":"Job search and labour-market information"},
+    {"name":"Indeed Canada","url":"https://ca.indeed.com/","purpose":"General job listings and market comparison"}
+  ]
+}
