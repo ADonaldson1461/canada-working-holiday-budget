@@ -1,0 +1,117 @@
+{
+  "version": "6.9",
+  "generatedAt": "2026-09-07T01:24:39.333626+00:00",
+  "summary": {
+    "sources": 11,
+    "healthy": 9,
+    "attention": 2,
+    "changes": 0,
+    "pendingReviews": 0,
+    "latestProposalCount": 0
+  },
+  "lastRun": "2026-09-07T01:24:39.147045+00:00",
+  "sources": [
+    {
+      "id": "ircc-iec",
+      "name": "IRCC \u2014 International Experience Canada",
+      "criticality": "critical",
+      "cadence": "weekly",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html",
+      "status": "healthy",
+      "use": "IEC eligibility, fees and participation rules"
+    },
+    {
+      "id": "cra-income-tax",
+      "name": "Canada Revenue Agency \u2014 Income Tax",
+      "criticality": "critical",
+      "cadence": "monthly",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/frequently-asked-questions-individuals/canadian-income-tax-rates-individuals-current-previous-years.html",
+      "status": "healthy",
+      "use": "Federal income-tax planning parameters"
+    },
+    {
+      "id": "cra-payroll",
+      "name": "Canada Revenue Agency \u2014 Payroll deductions",
+      "criticality": "critical",
+      "cadence": "monthly",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll.html",
+      "status": "healthy",
+      "use": "CPP and EI payroll planning parameters"
+    },
+    {
+      "id": "bc-wage",
+      "name": "Government of British Columbia \u2014 Minimum wage",
+      "criticality": "critical",
+      "cadence": "monthly",
+      "url": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/wages",
+      "status": "healthy",
+      "use": "BC minimum wage and effective dates"
+    },
+    {
+      "id": "ab-wage",
+      "name": "Government of Alberta \u2014 Minimum wage",
+      "criticality": "critical",
+      "cadence": "monthly",
+      "url": "https://www.alberta.ca/minimum-wage.aspx",
+      "status": "healthy",
+      "use": "Alberta minimum wage and effective dates"
+    },
+    {
+      "id": "on-wage",
+      "name": "Government of Ontario \u2014 Minimum wage",
+      "criticality": "critical",
+      "cadence": "monthly",
+      "url": "https://www.ontario.ca/page/minimum-wage-ontario",
+      "status": "attention",
+      "use": "Ontario minimum wage and effective dates"
+    },
+    {
+      "id": "qc-wage",
+      "name": "Government of Quebec \u2014 Minimum wage",
+      "criticality": "critical",
+      "cadence": "monthly",
+      "url": "https://www.cnesst.gouv.qc.ca/en/working-conditions/wage-and-pay/wage",
+      "status": "attention",
+      "use": "Quebec minimum wage"
+    },
+    {
+      "id": "bank-canada-fx",
+      "name": "Bank of Canada \u2014 Exchange rates",
+      "criticality": "high",
+      "cadence": "daily",
+      "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/",
+      "status": "healthy",
+      "use": "CAD reference FX data"
+    },
+    {
+      "id": "translink",
+      "name": "TransLink \u2014 Fares",
+      "criticality": "medium",
+      "cadence": "monthly",
+      "url": "https://www.translink.ca/transit-fares/pricing-and-fare-zones",
+      "status": "healthy",
+      "use": "Vancouver transit planning"
+    },
+    {
+      "id": "calgary-transit",
+      "name": "Calgary Transit \u2014 Fares",
+      "criticality": "medium",
+      "cadence": "monthly",
+      "url": "https://www.calgarytransit.com/content/transit/en/home/fares---passes.html",
+      "status": "healthy",
+      "use": "Calgary transit planning"
+    },
+    {
+      "id": "ttc",
+      "name": "TTC \u2014 Fares",
+      "criticality": "medium",
+      "cadence": "monthly",
+      "url": "https://www.ttc.ca/Fares-and-passes",
+      "status": "healthy",
+      "use": "Toronto transit planning"
+    }
+  ],
+  "pendingReviews": [],
+  "recentChanges": [],
+  "safety": "Read-only command centre. Canonical customer-facing data is not changed by research runs."
+}

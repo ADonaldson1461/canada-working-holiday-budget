@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-09-07T01:24:39.147045+00:00",
+  "checked": [
+    "ircc-iec",
+    "cra-income-tax",
+    "cra-payroll",
+    "bc-wage",
+    "ab-wage",
+    "bank-canada-fx",
+    "translink",
+    "calgary-transit",
+    "ttc"
+  ],
+  "changes": [],
+  "failures": [
+    {
+      "source": "on-wage",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source": "qc-wage",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}
