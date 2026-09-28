@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T01:26:24.512632+00:00",
+  "generatedAt": "2026-09-28T01:26:33.432973+00:00",
   "checked": [
     "ircc-iec",
     "cra-income-tax",
@@ -17,7 +17,7 @@
       "name": "Government of Alberta \u2014 Minimum wage",
       "criticality": "critical",
       "oldHash": "755cf3b83d06088e2df78692bb2774fd2eb9c190991562a4bb667ea5d9bec46c",
-      "newHash": "d34a3e318040580ffbe36c1122e25490d2e06e0a8aa9eeeda20d446f22fb6a0c",
+      "newHash": "7dbacdec87b034da893031426585b1dfc57fcad1f477a87515c867ce0569c011",
       "previousSnapshot": "/home/runner/work/canada-working-holiday-budget/canada-working-holiday-budget/research/snapshots/ab-wage.previous.txt"
     },
     {
@@ -25,7 +25,7 @@
       "name": "Bank of Canada \u2014 Exchange rates",
       "criticality": "high",
       "oldHash": "c710e2b181cc5e3685f446e92c429a7e8cce1a3b22e28bb93b537d7f2f36d26a",
-      "newHash": "03cca8eccd8a1665c6b5ed76604195b9f792b40b6f24d2020c2c2413f88495e5",
+      "newHash": "4eae9a2d8369f1a2b1ddc324a133b135b56b8495355fd0dc8431b39c510d08d8",
       "previousSnapshot": "/home/runner/work/canada-working-holiday-budget/canada-working-holiday-budget/research/snapshots/bank-canada-fx.previous.txt"
     },
     {
@@ -41,7 +41,7 @@
       "name": "Calgary Transit \u2014 Fares",
       "criticality": "medium",
       "oldHash": "557116b8c82818b2478f57a303009bb5c7e70b2c7e48e684ea1ceb352d251d63",
-      "newHash": "2960b8be71472c455afb8990c9df99a17dc675fc27bb972ea26035951ad8647d",
+      "newHash": "3b83c069f22e9c5f5d3f2659c7fa4c2b183db81ed2948686b85284b98fc7d25b",
       "previousSnapshot": "/home/runner/work/canada-working-holiday-budget/canada-working-holiday-budget/research/snapshots/calgary-transit.previous.txt"
     }
   ],
