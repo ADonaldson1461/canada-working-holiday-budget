@@ -1,10 +1,9 @@
 {
-  "generatedAt": "2026-09-28T01:26:33.432973+00:00",
+  "generatedAt": "2026-10-05T01:29:09.921963+00:00",
   "checked": [
     "ircc-iec",
     "cra-income-tax",
     "cra-payroll",
-    "bc-wage",
     "ab-wage",
     "bank-canada-fx",
     "translink",
@@ -17,7 +16,7 @@
       "name": "Government of Alberta \u2014 Minimum wage",
       "criticality": "critical",
       "oldHash": "755cf3b83d06088e2df78692bb2774fd2eb9c190991562a4bb667ea5d9bec46c",
-      "newHash": "7dbacdec87b034da893031426585b1dfc57fcad1f477a87515c867ce0569c011",
+      "newHash": "967e23115d48f0d947aa0603dd38b282d8e0b87297f9c40690cb5c32d0f76cf6",
       "previousSnapshot": "/home/runner/work/canada-working-holiday-budget/canada-working-holiday-budget/research/snapshots/ab-wage.previous.txt"
     },
     {
@@ -25,7 +24,7 @@
       "name": "Bank of Canada \u2014 Exchange rates",
       "criticality": "high",
       "oldHash": "c710e2b181cc5e3685f446e92c429a7e8cce1a3b22e28bb93b537d7f2f36d26a",
-      "newHash": "4eae9a2d8369f1a2b1ddc324a133b135b56b8495355fd0dc8431b39c510d08d8",
+      "newHash": "005a8e741205e15e084376ad0a4dd3561ddcd9c77714e96c49393b176df8ff6f",
       "previousSnapshot": "/home/runner/work/canada-working-holiday-budget/canada-working-holiday-budget/research/snapshots/bank-canada-fx.previous.txt"
     },
     {
@@ -41,11 +40,15 @@
       "name": "Calgary Transit \u2014 Fares",
       "criticality": "medium",
       "oldHash": "557116b8c82818b2478f57a303009bb5c7e70b2c7e48e684ea1ceb352d251d63",
-      "newHash": "3b83c069f22e9c5f5d3f2659c7fa4c2b183db81ed2948686b85284b98fc7d25b",
+      "newHash": "18ffa0f566483430e7257a9386079c02d285a7b533765aa2d7da7f972c964a8e",
       "previousSnapshot": "/home/runner/work/canada-working-holiday-budget/canada-working-holiday-budget/research/snapshots/calgary-transit.previous.txt"
     }
   ],
   "failures": [
+    {
+      "source": "bc-wage",
+      "error": "Remote end closed connection without response"
+    },
     {
       "source": "on-wage",
       "error": "HTTP Error 404: Not Found"
