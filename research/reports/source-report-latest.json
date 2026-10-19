@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T07:20:49.228822+00:00",
+  "generatedAt": "2026-10-19T06:12:22.329990+00:00",
   "checked": [
     "ircc-iec",
     "cra-income-tax",
@@ -13,11 +13,19 @@
   ],
   "changes": [
     {
+      "source": "ircc-iec",
+      "name": "IRCC \u2014 International Experience Canada",
+      "criticality": "critical",
+      "oldHash": "e1569611b6f850e35bfb130ea22833dbda00cd220188be2d37d7ee9358b73d58",
+      "newHash": "63c6386dae7ce3e20c18761a7fadee34a6889beb591090e086beeb14d3299c17",
+      "previousSnapshot": "/home/runner/work/canada-working-holiday-budget/canada-working-holiday-budget/research/snapshots/ircc-iec.previous.txt"
+    },
+    {
       "source": "ab-wage",
       "name": "Government of Alberta \u2014 Minimum wage",
       "criticality": "critical",
       "oldHash": "755cf3b83d06088e2df78692bb2774fd2eb9c190991562a4bb667ea5d9bec46c",
-      "newHash": "1a596c4d95fa69818ffed6768f01e328febe3f3333f78308646c101492a3da72",
+      "newHash": "4dbbb689308e5428b26a4a0062f196d8a6ad6ec150718fcfe93d4a1014a1f486",
       "previousSnapshot": "/home/runner/work/canada-working-holiday-budget/canada-working-holiday-budget/research/snapshots/ab-wage.previous.txt"
     },
     {
@@ -25,7 +33,7 @@
       "name": "Bank of Canada \u2014 Exchange rates",
       "criticality": "high",
       "oldHash": "c710e2b181cc5e3685f446e92c429a7e8cce1a3b22e28bb93b537d7f2f36d26a",
-      "newHash": "e70a8ccc641f5dbfaa6b1339171896cea65cf32dfba3c7b446b882600fa84538",
+      "newHash": "fd90a063efad85798f7090423d4430faf0f946f7ef9b62fb8fe1c1f82fc60165",
       "previousSnapshot": "/home/runner/work/canada-working-holiday-budget/canada-working-holiday-budget/research/snapshots/bank-canada-fx.previous.txt"
     },
     {
@@ -41,7 +49,7 @@
       "name": "Calgary Transit \u2014 Fares",
       "criticality": "medium",
       "oldHash": "557116b8c82818b2478f57a303009bb5c7e70b2c7e48e684ea1ceb352d251d63",
-      "newHash": "b416c814bc22e7f4424bf19ac648bddcd7390fcd46211ae86558c422672f60d5",
+      "newHash": "210ab8bb0601fe0b60bb00e79bf85a206d6da99fdff5712ddf66efb40a509e0d",
       "previousSnapshot": "/home/runner/work/canada-working-holiday-budget/canada-working-holiday-budget/research/snapshots/calgary-transit.previous.txt"
     }
   ],
